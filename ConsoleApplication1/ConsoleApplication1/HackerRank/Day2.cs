@@ -7,18 +7,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.HackerRank
 {
-    class SolutionDay1
+    class SolutionDay2
     {
-        static void MainDay1(String[] args)
+        public static void Main(String[] args)
         {
-            int i = 4;
-            double d = 4.0;
-            string s = "HackerRank ";
-
-            // Declare second integer, double, and String variables.
-            int i2 = 0;
-            double d2 = 0.0;
-            string s2 = string.Empty;
+            double mealPrice = 12.0;
+            int tipPercentaje = 20;
+            int taxPercentaje = 8;
 
             // Read and save an integer, double, and String to your variables.
             using (var input = Console.OpenStandardInput())
@@ -28,17 +23,17 @@ namespace ConsoleApplication1.HackerRank
                     if (!reader.EndOfStream)
                     {
                         var line1 = reader.ReadLine();
-                        i2 = Convert.ToInt32(line1);
+                        mealPrice = Convert.ToDouble(line1);
                     }
                     if (!reader.EndOfStream)
                     {
                         var line2 = reader.ReadLine();
-                        d2 = Convert.ToDouble(line2);
+                        tipPercentaje = Convert.ToInt32(line2);
                     }
                     if (!reader.EndOfStream)
                     {
                         var line3 = reader.ReadLine();
-                        s2 = line3;
+                        taxPercentaje = Convert.ToInt32(line3);
                     }
                 }
             }
@@ -47,15 +42,11 @@ namespace ConsoleApplication1.HackerRank
             {
                 using (var sw = new StreamWriter(output))
                 {
-                    // Print the sum of both integer variables on a new line.
-                    sw.WriteLine(i + i2);
-
-                    // Print the sum of the double variables on a new line.
-                    sw.WriteLine((d + d2).ToString("N1"));
-
-                    // Concatenate and print the String variables on a new line
-                    // The 's' variable above should be printed first.
-                    sw.WriteLine(s + s2);
+                    double price = mealPrice;
+                    double tax = mealPrice * (taxPercentaje / 100.0);
+                    double tip = mealPrice * (tipPercentaje / 100.0);
+                    int result = Convert.ToInt32(Math.Round(price + tax + tip));
+                    sw.WriteLine(string.Format("The total meal cost is {0} dollars.", result));
                 }
             }
 

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ConsoleApplication1.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,6 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EquilibriumSolution.cs" />
+    <Compile Include="HackerRank\Day5.cs" />
+    <Compile Include="HackerRank\Day4.cs" />
+    <Compile Include="HackerRank\Day3.cs" />
+    <Compile Include="HackerRank\Day2.cs" />
     <Compile Include="HackerRank\Day1.cs" />
     <Compile Include="HackerRank\Day0.cs" />
     <Compile Include="Multiplos.cs" />

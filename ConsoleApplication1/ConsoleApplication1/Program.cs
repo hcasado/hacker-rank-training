@@ -10,12 +10,11 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            var m = new Multiplos();
-            var s = m.solution(new int[] { 3, 5 }, 1000);
-            Console.WriteLine(s);
+            HackerRank.SolutionDay2.Main(args);
+
             Console.ReadKey();
         }
     }
 
-    
+
 }

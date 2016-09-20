@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1.HackerRank
 {
-    class Solution
+    class SolutionDay0
     {
-        static void Main2(String[] args)
+        static void Main(String[] args)
         {
             // Declare a variable named 'inputString' to hold our input.
             String inputString;
